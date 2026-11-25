@@ -17,8 +17,8 @@ I will build a modern responsive restaurant website
 restaurant website
 cafe website
 food website
-landing page
-responsive website
+qr code menu
+responsive design
 ```
 
 ---
@@ -60,6 +60,7 @@ WHAT YOU GET:
 ✅ "Order on WhatsApp" button: customers send their order straight to your phone
 ✅ Click-to-call and Google Maps location
 ✅ Photo gallery and special deals section
+✅ QR code menu: customers scan at the table and see your full menu
 ✅ Looks perfect on every phone, tablet and laptop
 ✅ Fast loading (no heavy page builders)
 ✅ Clean, hand-written HTML, CSS and JavaScript
@@ -122,4 +123,6 @@ A: Yes. The menu is easy to edit, and I can also make updates for you later as a
 2. `2-showcase.jpg`
 3. `3-mobile.jpg`
 
-> Video bhi daal sakte ho (Fiverr pe video wale gigs zyada bikte hain). Baad mein phone se ek 30-60 second ki screen recording bana lena jisme ek website scroll ho rahi ho.
+> ✅ Video lag chuki hai: `gig-video.mp4` (44 second, music ke saath).
+>
+> ~~Video bhi daal sakte ho~~ (Fiverr pe video wale gigs zyada bikte hain). Baad mein phone se ek 30-60 second ki screen recording bana lena jisme ek website scroll ho rahi ho.
