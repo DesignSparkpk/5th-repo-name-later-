@@ -63,7 +63,7 @@ Need a landing page that looks professional and brings you real customers, fast?
 I design and build modern, mobile-friendly landing pages with clean HTML, CSS and JavaScript, and I can deliver your page in just 24 hours.
 
 WHAT YOU GET:
-✅ Custom design that matches your brand (no generic templates)
+✅ Custom design that matches your brand
 ✅ Looks perfect on phones, tablets and laptops
 ✅ Clear call-to-action buttons: call, WhatsApp, booking or contact form
 ✅ Smooth animations and a fast-loading page
@@ -75,11 +75,10 @@ PERFECT FOR:
 • Gyms, coaches and personal trainers
 • Apps, software and startups
 • Restaurants, cafes and local businesses
-• Product launches and promotions
 
 WHY CHOOSE ME:
 ⚡ Fast: Basic package delivered in 24 hours
-🎨 Every page designed for your business, not copied from a template
+🎨 Every page designed for your business
 🔁 Generous revisions until you're happy
 💬 Quick replies and clear communication
 
