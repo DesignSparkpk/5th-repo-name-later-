@@ -6,7 +6,7 @@
 
 **Gig title** (80 characters tak):
 ```
-I will build a modern responsive website for your restaurant or cafe
+I will build a modern responsive restaurant website
 ```
 
 **Category:** Programming & Tech → Website Development → Business Websites
@@ -25,13 +25,13 @@ responsive website
 
 ## Pricing (3 packages)
 
-Fiverr pe Pakistan ke restaurant-website sellers (jinke 10-20 orders hain) **$80 / $120 / $160** le rahe hain (25 Nov 2026 ko check kiya). Naye account ke liye hum unse **kam** rakh rahe hain taake pehle orders aayein. **5 reviews ke baad $60 / $100 / $170 kar dena**, aur 15 reviews ke baad unke barabar.
+Fiverr is category (Website Development → Custom Websites) mein **kam se kam $80** ka package rakhna zaroori hai. Is liye prices market rate ke qareeb hain. 5-10 achhe reviews ke baad dheere dheere barhana.
 
 | | **Basic** | **Standard** | **Premium** |
 |---|---|---|---|
 | Name | Starter Page | Menu + Ordering | Complete Website |
 | Description | 1-page website: hero, about, menu highlights, contact and map | Full online menu with prices, WhatsApp ordering, gallery, deals | Everything in Standard + multi-page, SEO setup, and live hosting setup |
-| Price | **$45** | **$85** | **$150** |
+| Price | **$80** | **$110** | **$160** |
 | Delivery | 3 days | 5 days | 7 days |
 | Revisions | 2 | 3 | Unlimited |
 | Pages | 1 | 1 | Up to 5 |
@@ -40,8 +40,10 @@ Fiverr pe Pakistan ke restaurant-website sellers (jinke 10-20 orders hain) **$80
 | Source code | ✅ | ✅ | ✅ |
 
 **Extras (Gig Extras):**
-- Extra fast delivery: Basic 2 days (+$10), Standard 3 days (+$20)
-- Additional page: +$15
+- Extra fast delivery: Basic 2 days (+$15), Standard 3 days (+$25), Premium 5 days (+$35)
+- Additional page: +$20
+- Additional revision: +$10
+- Hosting setup: +$15
 
 ---
 
