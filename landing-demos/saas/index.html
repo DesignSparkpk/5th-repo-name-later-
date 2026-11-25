@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flowly | Project management your team will love</title>
+<meta name="description" content="Flowly brings your team's tasks, docs and deadlines into one simple workspace. Start free today.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1024;--muted:#5d6280;--brand:#5b4cf0;--brand2:#9b5cf6;--soft:#f3f2ff;--line:#e7e6f5;--bg:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:10px;font-weight:600;transition:.2s}
+.btn-p{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;box-shadow:0 10px 26px rgba(91,76,240,.35)}.btn-p:hover{transform:translateY(-2px)}
+.btn-o{border:1px solid var(--line);background:#fff}.btn-o:hover{border-color:var(--brand)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{display:flex;gap:10px;align-items:center;font-weight:800;font-size:21px}
+.logo i{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:block;position:relative}
+.logo i::after{content:"";position:absolute;inset:9px;border-radius:50%;border:3px solid #fff;border-right-color:transparent}
+.menu{display:flex;gap:30px;color:var(--muted);font-weight:500}.menu a:hover{color:var(--ink)}
+.navr{display:flex;gap:10px;align-items:center}.navr .btn{padding:10px 18px}
+.hero{text-align:center;padding:70px 0 0;background:radial-gradient(ellipse at 50% 0,#ece9ff 0,#fff 60%)}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px 6px 6px;font-size:14px;font-weight:500;margin-bottom:24px}
+.pill b{background:var(--brand);color:#fff;border-radius:999px;padding:2px 10px;font-size:12px}
+h1{font-size:clamp(40px,6.4vw,72px);line-height:1.04;letter-spacing:-2.5px;font-weight:800;max-width:900px;margin:0 auto}
+h1 span{background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:20px;color:var(--muted);max-width:600px;margin:22px auto 34px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.note{font-size:14px;color:var(--muted);margin-top:14px}
+.app{margin:60px auto 0;max-width:1000px;border-radius:16px 16px 0 0;border:1px solid var(--line);border-bottom:0;background:#fff;box-shadow:0 -10px 60px rgba(91,76,240,.15);overflow:hidden;text-align:left}
+.app-top{display:flex;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);background:#fafaff}.app-top i{width:11px;height:11px;border-radius:50%;background:#e3e1f2}
+.app-body{display:grid;grid-template-columns:200px 1fr;min-height:360px}
+.side{border-right:1px solid var(--line);padding:18px;font-size:14px;color:var(--muted)}
+.side div{padding:8px 10px;border-radius:8px;margin-bottom:4px}.side .on{background:var(--soft);color:var(--brand);font-weight:600}
+.board{padding:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:#fcfcff}
+.col h5{font-size:13px;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px;font-size:14px;font-weight:600;box-shadow:0 2px 6px rgba(14,16,36,.04)}
+.card small{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;margin-bottom:6px}
+.t1{background:#ece9ff;color:var(--brand)}.t2{background:#e3f8ee;color:#119a5b}.t3{background:#fff1e3;color:#d26a00}
+.av{display:flex;margin-top:8px}.av span{width:22px;height:22px;border-radius:50%;border:2px solid #fff;margin-right:-6px;background:linear-gradient(135deg,#ffb36b,#ff6b9b)}.av span+span{background:linear-gradient(135deg,#6bd0ff,#5b4cf0)}
+.bar{height:6px;border-radius:3px;background:var(--line);margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.logos{padding:40px 0;text-align:center;color:var(--muted);font-size:14px;border-bottom:1px solid var(--line)}
+.logos div{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:16px;font-weight:800;font-size:22px;color:#b6b4cc;letter-spacing:-.5px}
+section{padding:96px 0}
+.head{text-align:center;max-width:640px;margin:0 auto 54px}
+.head small{color:var(--brand);font-weight:700;font-size:14px}
+h2{font-size:clamp(30px,4.4vw,46px);letter-spacing:-1.5px;line-height:1.1;margin:8px 0 14px}
+.head p{color:var(--muted);font-size:18px}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feat{padding:28px;border:1px solid var(--line);border-radius:16px;transition:.2s}
+.feat:hover{box-shadow:0 20px 40px rgba(91,76,240,.1);border-color:#d6d2ff}
+.feat .ic{width:46px;height:46px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.feat h3{font-size:19px;margin-bottom:6px}.feat p{color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.split img{border-radius:20px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 30px 60px rgba(14,16,36,.12)}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+.nums b{display:block;font-size:38px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nums small{color:var(--muted)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev{background:var(--soft);border-radius:16px;padding:28px}
+.rev p{margin-bottom:20px}.who{display:flex;gap:12px;align-items:center}.who img{width:42px;height:42px;border-radius:50%;object-fit:cover}.who small{color:var(--muted);display:block}
+.final{background:linear-gradient(135deg,#1b1546,#3a2a96);color:#fff;border-radius:24px;padding:70px 30px;text-align:center}
+.final h2{color:#fff}.final p{color:#cfcaff;font-size:18px;margin-bottom:30px}
+.final .btn-o{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+footer{padding:36px 0;color:var(--muted);font-size:14px;margin-top:80px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.feats,.revs{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.menu{display:none}.app-body{grid-template-columns:1fr}.side{display:none}}
+@media(max-width:600px){.feats,.revs{grid-template-columns:1fr}.board{grid-template-columns:1fr}.board .col:nth-child(n+2){display:none}section{padding:70px 0}.navr .btn-o{display:none}.logos div{gap:24px;font-size:18px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#"><i></i>Flowly</a><div class="menu"><a href="#features">Features</a><a href="#why">Why Flowly</a><a href="#reviews">Customers</a><a href="#start">Pricing</a></div><div class="navr"><a class="btn btn-o" href="#">Log in</a><a class="btn btn-p" href="#start">Start free</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+ <div class="pill"><b>New</b>AI summaries for every project →</div>
+ <h1>Project management your team will <span>actually love</span></h1>
+ <p>Tasks, docs and deadlines in one simple workspace. Plan faster, stay aligned, and ship on time.</p>
+ <div class="cta"><a class="btn btn-p" href="#start">Start free for 14 days →</a><a class="btn btn-o" href="#features">▶ Watch demo</a></div>
+ <div class="note">No credit card required · Cancel any time</div>
+ <div class="app">
+  <div class="app-top"><i></i><i></i><i></i></div>
+  <div class="app-body">
+   <div class="side"><div class="on">▦ Board</div><div>☰ List</div><div>◷ Timeline</div><div>✉ Inbox</div><div style="margin-top:18px;font-weight:600;color:var(--ink)">Projects</div><div>● Website launch</div><div>● Mobile app</div><div>● Q3 campaign</div></div>
+   <div class="board">
+    <div class="col"><h5>To do <span>4</span></h5><div class="card"><small class="t1">Design</small><br>New pricing page<div class="av"><span></span><span></span></div></div><div class="card"><small class="t3">Marketing</small><br>Launch email sequence<div class="av"><span></span></div></div></div>
+    <div class="col"><h5>In progress <span>3</span></h5><div class="card"><small class="t2">Dev</small><br>Checkout API<div class="bar"><i style="width:65%"></i></div></div><div class="card"><small class="t1">Design</small><br>Mobile onboarding<div class="bar"><i style="width:40%"></i></div></div></div>
+    <div class="col"><h5>Done <span>12</span></h5><div class="card"><small class="t2">Dev</small><br>User login ✓<div class="av"><span></span><span></span></div></div><div class="card"><small class="t3">Marketing</small><br>Product Hunt page ✓</div></div>
+   </div>
+  </div>
+ </div>
+</div></header>
+
+<div class="logos wrap">Trusted by 4,000+ fast-moving teams<div><span>Northwind</span><span>Lumen</span><span>Acme Co</span><span>Vertex</span><span>Brightly</span></div></div>
+
+<section id="features"><div class="wrap">
+ <div class="head"><small>Features</small><h2>Everything your team needs, nothing it doesn't</h2><p>Flowly replaces your messy spreadsheets, chats and sticky notes with one calm workspace.</p></div>
+ <div class="feats">
+  <div class="feat"><div class="ic">▦</div><h3>Boards & lists</h3><p>See every task at a glance and drag work forward as it moves.</p></div>
+  <div class="feat"><div class="ic">◷</div><h3>Timelines</h3><p>Plan launches with clear deadlines and dependencies.</p></div>
+  <div class="feat"><div class="ic">✦</div><h3>AI summaries</h3><p>Get a one-paragraph update on any project in a second.</p></div>
+  <div class="feat"><div class="ic">💬</div><h3>Comments & docs</h3><p>Discuss work right where it happens. No more lost threads.</p></div>
+  <div class="feat"><div class="ic">🔗</div><h3>100+ integrations</h3><p>Connect Slack, Google Drive, GitHub and the tools you already use.</p></div>
+  <div class="feat"><div class="ic">🔒</div><h3>Secure by default</h3><p>SSO, roles and daily backups keep your work safe.</p></div>
+ </div>
+</div></section>
+
+<section id="why" style="padding-top:0"><div class="wrap split">
+ <img src="img/team.jpg" alt="Team working together" loading="lazy">
+ <div>
+  <small style="color:var(--brand);font-weight:700">Why Flowly</small>
+  <h2>Less time managing work, more time doing it</h2>
+  <p style="color:var(--muted);font-size:18px">Teams that switch to Flowly cut their status meetings in half and ship projects faster.</p>
+  <div class="nums"><div><b>2x</b><small>faster project delivery</small></div><div><b>6 hrs</b><small>saved per person, per week</small></div><div><b>98%</b><small>customer satisfaction</small></div><div><b>5 min</b><small>to set up your team</small></div></div>
+ </div>
+</div></section>
+
+<section id="reviews" style="padding-top:0"><div class="wrap">
+ <div class="head"><small>Customers</small><h2>Teams love working in Flowly</h2></div>
+ <div class="revs">
+  <div class="rev"><p>"We moved our whole agency over in a day. Everyone finally knows what to work on next."</p><div class="who"><img src="img/p1.jpg" alt=""><div><b>Maya L.</b><small>Studio Lead, Lumen</small></div></div></div>
+  <div class="rev"><p>"The AI summaries alone save me an hour every Monday. Our standups are now 10 minutes."</p><div class="who"><img src="img/p2.jpg" alt=""><div><b>Daniel P.</b><small>CTO, Vertex</small></div></div></div>
+  <div class="rev"><p>"Simple enough for our marketing team, powerful enough for our developers. Rare combo."</p><div class="who"><img src="img/p3.jpg" alt=""><div><b>Hannah W.</b><small>COO, Brightly</small></div></div></div>
+ </div>
+</div></section>
+
+<section id="start" style="padding:0"><div class="wrap"><div class="final">
+ <h2>Start shipping faster today</h2>
+ <p>Free for 14 days. Set up your team in under 5 minutes.</p>
+ <div class="cta"><a class="btn btn-p" href="#">Start free trial →</a><a class="btn btn-o" href="#">Talk to sales</a></div>
+</div></div></section>
+
+<footer><div class="wrap"><span>© 2026 Flowly · Demo landing page</span><span>Designed by DesignSpark Studio</span></div></footer>
+</body>
+</html>
