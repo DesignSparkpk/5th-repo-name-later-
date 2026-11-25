@@ -11,12 +11,9 @@
 create a professional landing page in 24 hours
 ```
 
-**Category:** Programming & Tech → Website Development → Service type: **Landing Pages** (agar ye option na ho to "Custom Websites")
+**Category:** Graphics & Design → **Landing Page Design** (Website Development mein $80 minimum hai; is category mein sasta rakh sakte hain)
 
-**Metadata:**
-- Website type: **Business** (+ Landing page agar option ho)
-- Programming language: **HTML, CSS, JavaScript**
-- Features: Contact form, Social media, Gallery, Map (jo mile). Payment ya e-commerce **nahi**.
+**Platform and tool:** sirf **Other** → `HTML, CSS, JavaScript (hand-coded)`. Adobe XD, Figma, Photoshop, WordPress waghaira **tick mat karo**.
 
 **Search tags:**
 ```
@@ -29,30 +26,21 @@ html css website
 
 ---
 
-## Pricing
-Is category mein bhi **kam se kam $80** ho sakta hai, is liye yahi rakha hai:
+## Pricing (shuru ke reviews ke liye sasta)
 
 | | Basic | Standard | Premium |
 |---|---|---|---|
 | Name | `Express Landing` | `Business Landing` | `Pro Landing` |
-| Description | `1-page landing page, up to 5 sections, mobile-friendly, delivered in 24 hours.` | `Up to 8 sections, animations, contact form or WhatsApp button, speed optimized.` | `Up to 12 sections, animations, SEO setup, contact form and free hosting setup.` |
+| Description | `1-page landing page, up to 4 sections, mobile-friendly, delivered in 24 hours.` | `Up to 8 sections, animations, contact form, speed optimized + FREE hosting setup.` | `Up to 12 sections, animations, SEO setup, contact form + FREE hosting setup.` |
 | Delivery | **1 day** | **2 days** | **3 days** |
-| Pages | 1 | 1 | 1 |
 | Revisions | 2 | 4 | Unlimited |
-| Content upload | ✅ | ✅ | ✅ |
-| Speed optimization | ✅ | ✅ | ✅ |
-| Hosting setup | ❌ | ❌ | ✅ |
-| Social media icons | ✅ | ✅ | ✅ |
-| Opt-in form | ❌ | ✅ | ✅ |
-| Price | **$80** | **$110** | **$150** |
+| Price | **$25** | **$55** | **$95** |
 
-Opt-in form = email ya contact form. Ye hum dete hain (form jo email pe bheje).
+Sirf wo rows tick karo jo sach mein dete ho. Source file (PSD/XD/Figma), logo design, payment ya e-commerce **mat** tick karo.
 
-**Extras:**
-- Additional page: **$25** (+1 day)
-- Additional revision: **$10** (+1 day)
-- Hosting setup: **$15** (+1 day)
-- Extra fast delivery: **mat lagao.** Basic pehle se 24 ghante ka hai.
+**Extras:** Additional page **$15** (+1 day) · Additional revision **$5** (+1 day) · Extra fast delivery **untick**.
+
+**5 reviews ke baad:** $35 / $65 / $110.
 
 ---
 
@@ -69,6 +57,7 @@ WHAT YOU GET:
 ✅ Smooth animations and a fast-loading page
 ✅ SEO-friendly structure
 ✅ Clean source code that you fully own
+✅ FREE hosting setup in Standard and Premium
 
 PERFECT FOR:
 • Clinics, dentists and health services
@@ -104,11 +93,11 @@ Message me before ordering and I'll recommend the best package for you. 🙂
 **Question:** `Will my landing page work on mobile?`
 **Answer:** `Yes. Every page is fully responsive and tested on phones, tablets and desktops before delivery.`
 
-**Question:** `Do you use WordPress or a page builder?`
-**Answer:** `No. I hand-build each page with clean HTML, CSS and JavaScript, so it loads fast and is cheap and easy to host.`
+**Question:** `Is this a design file or a working website?`
+**Answer:** `A working, coded landing page (HTML, CSS, JavaScript) that you can put online. I don't deliver Figma, XD or PSD files.`
 
 **Question:** `Can you put my page online?`
-**Answer:** `Yes. Hosting setup is included in the Pro package and available as an extra for other packages. You buy the domain, and I help you connect it.`
+**Answer:** `Yes. Free hosting setup is included in Standard and Premium. You buy the domain name, and I help you connect it.`
 
 ---
 
@@ -139,4 +128,4 @@ Description:
 ```
 Demo landing page for a [dental clinic], designed to show my work. Responsive layout with clear call-to-action buttons, services, reviews and contact form. Built with HTML, CSS and JavaScript.
 ```
-Project cost: `80` (pichli dafa wali line bhi add karo: *"Self-initiated demo project. Cost shown is my standard price for a page like this."*)
+Project cost: `25` (pichli dafa wali line bhi add karo: *"Self-initiated demo project. Cost shown is my standard price for a page like this."*)
