@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+body{width:1280px;height:720px;overflow:hidden;font-family:Poppins,sans-serif;color:#fff;background:radial-gradient(circle at 80% 15%,#2f1f5e 0,#120d24 55%,#0b0816 100%)}
+.scene{position:absolute;inset:0;opacity:0}
+.grad{background:linear-gradient(135deg,#ffd36e,#ff8a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+h1{font-size:68px;font-weight:800;letter-spacing:-2px;line-height:1.05}
+.sub{font-size:24px;color:#c9c1e6;margin-top:18px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:28px}
+.logo img{width:50px;height:50px}
+.brand{position:absolute;left:40px;bottom:28px;font-size:20px}.brand img{width:34px;height:34px}
+/* mockup */
+.cap{position:absolute;left:60px;top:52px}
+.cap .k{color:#ffcf7d;font-size:15px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.cap{max-width:320px}.cap .n{font-size:38px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-top:4px}
+.cap .d{color:#c9c1e6;font-size:17px;margin-top:6px;max-width:330px}
+.laptop{position:absolute;left:400px;top:70px;width:792px;height:525px;border-radius:12px;overflow:hidden;background:#1d1a2b;box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 0 2px #3a3550}
+.bar{height:30px;background:#1d1a2b;display:flex;align-items:center;gap:7px;padding-left:12px}
+.bar i{width:10px;height:10px;border-radius:50%;background:#ff5f57}.bar i:nth-child(2){background:#febc2e}.bar i:nth-child(3){background:#28c840}
+.screen{width:792px;height:495px;overflow:hidden;position:relative}
+.screen iframe{width:1440px;height:900px;border:0;transform:scale(.55);transform-origin:0 0;position:absolute;left:0;top:0}
+.phone{position:absolute;left:1070px;top:250px;width:185px;height:400px;border-radius:28px;overflow:hidden;background:#000;box-shadow:0 25px 60px rgba(0,0,0,.7),0 0 0 6px #111,0 0 0 7px #444}
+.phone iframe{width:390px;height:844px;border:0;transform:scale(.4744);transform-origin:0 0;position:absolute;left:0;top:0}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:22px 60px;margin-top:40px;text-align:left;font-size:28px;font-weight:600}
+.feat div{opacity:0}
+.btn{margin-top:34px;display:inline-block;padding:16px 34px;border-radius:999px;background:linear-gradient(135deg,#ffd36e,#ff8a3d);color:#1a1030;font-weight:700;font-size:24px}
+</style></head><body>
+<div class="scene center" id="intro">
+ <div class="logo" id="il"><img src="ds-icon.png"><span>Design<span class="grad">Spark</span></span></div>
+ <h1 style="margin-top:26px" id="it">Modern <span class="grad">Restaurant</span><br>Websites</h1>
+ <div class="sub" id="is">Mobile-friendly · Online menu · WhatsApp ordering</div>
+</div>
+<div id="sites"></div>
+<div class="scene center" id="features">
+ <h1>Everything your restaurant needs</h1>
+ <div class="feat"><div>📋 Full online menu</div><div>💬 WhatsApp ordering</div><div>📍 Google Maps & call button</div><div>📱 Perfect on every phone</div><div>⚡ Fast loading</div><div>🎨 Custom design</div></div>
+</div>
+<div class="scene center" id="outro">
+ <div class="logo"><img src="ds-icon.png"><span>Design<span class="grad">Spark</span> Studio</span></div>
+ <h1 style="margin-top:26px">Let's build <span class="grad">your</span><br>restaurant website</h1>
+ <div class="btn">Message me on Fiverr</div>
+</div>
+<script>
+const SITES=[
+ ['sultan','Turkish Restaurant','Sultan Istanbul','Palace-style design with platters, deals and WhatsApp ordering'],
+ ['zilla','Steakhouse & Family','Zilla Bite','Sizzling video hero, bestsellers and kids area'],
+ ['karahi','Arabian & Shinwari','Al Arabian Mandi','Warm heritage look with signature dishes and menu'],
+ ['bellas','Pizza & Pasta','Bella\'s','Tap-to-add menu with cart sent to WhatsApp'],
+ ['flameup','Fast Food & Deals','Flame Up','Bold brand with combos, deals and rooftop'],
+];
+const box=document.getElementById('sites');
+SITES.forEach((s,i)=>{box.insertAdjacentHTML('beforeend',`<div class="scene" id="s${i}">
+ <div class="cap"><div class="k">${s[1]}</div><div class="n">${s[2]}</div><div class="d">${s[3]}</div><div class="d" style="margin-top:14px;font-size:13px;opacity:.7">Concept design</div></div>
+ <div class="laptop"><div class="bar"><i></i><i></i><i></i></div><div class="screen"><iframe id="d${i}" src="/${s[0]}/"></iframe></div></div>
+ <div class="phone"><iframe id="m${i}" src="/${s[0]}/"></iframe></div>
+ <div class="logo brand"><img src="ds-icon.png"><span>Design<span class="grad">Spark</span></span></div></div>`)});
+const INTRO=3.5, SITE=6.5, FEAT=4.5, OUT=4;
+window.TOTAL=INTRO+SITES.length*SITE+FEAT+OUT;
+const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+const clamp=x=>Math.max(0,Math.min(1,x));
+function fade(t,start,len,f=.45){return Math.min(clamp((t-start)/f),clamp((start+len-t)/f))}
+window.render=function(t){
+ window.scrollTo(0,0);document.documentElement.scrollLeft=0;document.body.scrollLeft=0;document.querySelectorAll('.screen,.phone,.laptop,.scene').forEach(e=>{e.scrollLeft=0;e.scrollTop=0});
+ const iv=fade(t,0,INTRO,.01);document.getElementById('intro').style.opacity=iv;
+ ['il','it','is'].forEach((id,k)=>{const p=ease(clamp((t-.2-k*.35)/.7));const e=document.getElementById(id);e.style.opacity=p;e.style.transform=`translateY(${(1-p)*30}px)`});
+ SITES.forEach((s,i)=>{const st=INTRO+i*SITE;const el=document.getElementById('s'+i);el.style.opacity=fade(t,st,SITE);
+  if(t>=st-0.5&&t<=st+SITE+0.5){const p=ease(clamp((t-st-1)/(SITE-1.8)));
+   for(const [id,maxv] of [['d'+i,2.3],['m'+i,3.2]]){const f=document.getElementById(id);try{const w=f.contentWindow;const H=w.document.documentElement.scrollHeight-w.innerHeight;w.scrollTo({top:Math.min(H,p*w.innerHeight*maxv),behavior:'instant'})}catch(e){}}}});
+ const fs=INTRO+SITES.length*SITE;document.getElementById('features').style.opacity=fade(t,fs,FEAT);
+ document.querySelectorAll('.feat div').forEach((d,k)=>{const p=ease(clamp((t-fs-.4-k*.25)/.5));d.style.opacity=p;d.style.transform=`translateX(${(1-p)*-30}px)`});
+ const os=fs+FEAT;const o=document.getElementById('outro');o.style.opacity=fade(t,os,OUT+1,.45);
+};
+</script></body></html>
