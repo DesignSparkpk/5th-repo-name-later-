@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DesignSpark Studio | Restaurant & Small Business Websites</title>
+<meta name="description" content="DesignSpark Studio builds modern, fast, mobile-friendly websites for restaurants, cafes and small businesses, with online menus, WhatsApp ordering and Google Maps.">
+<meta property="og:title" content="DesignSpark Studio | Restaurant Websites">
+<meta property="og:description" content="Modern, fast, mobile-friendly websites for restaurants, cafes and small businesses.">
+<meta property="og:image" content="img/sultan-istanbul.jpg">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0a1c;--bg2:#15102b;--card:#1b1535;--line:rgba(255,255,255,.1);--text:#f4f2fb;--muted:#b3abd1;--accent:#ffb547;--accent2:#ff8a3d;--green:#4ade80}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:0 auto}
+.grad{background:linear-gradient(135deg,#ffd36e,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:16px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:linear-gradient(135deg,#ffd36e,var(--accent2));color:#1a1030;box-shadow:0 10px 30px rgba(255,150,60,.3)}
+.btn-ghost{border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent)}
+section{padding:90px 0}
+.eyebrow{display:inline-block;color:var(--accent);font-weight:600;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(30px,4.5vw,44px);line-height:1.15;font-weight:800;letter-spacing:-1px;margin-bottom:14px}
+.lead{color:var(--muted);font-size:18px;max-width:620px}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(13,10,28,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.logo img{width:36px;height:36px}
+.links{display:flex;gap:30px;font-weight:500;color:var(--muted)}
+.links a:hover{color:var(--text)}
+nav .btn{padding:10px 20px;font-size:15px}
+
+/* hero */
+.hero{padding:90px 0 70px;background:radial-gradient(circle at 85% 10%,#2f1f5e 0,transparent 55%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,181,71,.12);border:1px solid rgba(255,181,71,.35);color:#ffd08a;padding:7px 16px;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:22px}
+h1{font-size:clamp(38px,6vw,62px);line-height:1.07;font-weight:800;letter-spacing:-2px;margin-bottom:20px}
+.hero p{color:var(--muted);font-size:19px;margin-bottom:32px;max-width:520px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{position:relative}
+.hero-img img{border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 1px var(--line)}
+.badge{position:absolute;left:-18px;bottom:-18px;background:var(--card);border:1px solid var(--line);padding:12px 18px;border-radius:14px;font-weight:600;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.badge b{color:var(--green)}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.f .ic{font-size:30px;margin-bottom:12px}
+.f h3{font-size:18px;margin-bottom:6px}
+.f p{color:var(--muted);font-size:15px}
+
+/* work */
+#work{background:var(--bg2)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:48px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .2s,border-color .2s}
+.proj:hover{transform:translateY(-4px);border-color:rgba(255,181,71,.4)}
+.proj .body{padding:20px 22px 24px}
+.proj h3{font-size:19px}
+.proj p{color:var(--muted);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);border:1px solid rgba(255,181,71,.35);padding:2px 10px;border-radius:999px;margin-top:10px}
+.proj.wide{grid-column:1/-1}
+.proj.wide img{max-height:520px;object-fit:cover;width:100%}
+.note{color:var(--muted);font-size:14px;margin-top:22px;text-align:center}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;align-items:stretch}
+.price{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px;display:flex;flex-direction:column}
+.price.pop{border:2px solid var(--accent);position:relative;box-shadow:0 20px 60px rgba(255,150,60,.15)}
+.price.pop::before{content:"Most popular";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ffd36e,var(--accent2));color:#1a1030;font-weight:700;font-size:13px;padding:4px 14px;border-radius:999px}
+.price h3{font-size:20px}
+.amt{font-size:46px;font-weight:800;margin:8px 0 2px}
+.amt small{font-size:16px;color:var(--muted);font-weight:500}
+.price .d{color:var(--muted);font-size:15px;margin-bottom:18px}
+.price ul{list-style:none;margin-bottom:26px;flex:1}
+.price li{padding:7px 0;font-size:15px;border-bottom:1px dashed var(--line)}
+.price li::before{content:"✓";color:var(--green);font-weight:700;margin-right:10px}
+.price .btn{justify-content:center}
+
+/* steps */
+#process{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#ffd36e,var(--accent2));color:#1a1030;font-weight:800;margin-bottom:14px}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+/* faq */
+.faq{max-width:760px;margin:40px auto 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px}
+
+/* final cta */
+.final{background:linear-gradient(135deg,#2a1b55,#14102a);border:1px solid var(--line);border-radius:28px;padding:64px 30px;text-align:center}
+.final p{color:var(--muted);font-size:18px;margin:0 auto 30px;max-width:560px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+ .hero .wrap{grid-template-columns:1fr}
+ .features,.steps{grid-template-columns:repeat(2,1fr)}
+ .prices{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
+ .price.pop{margin:10px 0}
+ .links{display:none}
+}
+@media (max-width:620px){
+ section{padding:70px 0}
+ .hero{padding:56px 0 50px}
+ .grid,.features,.steps{grid-template-columns:1fr}
+ .badge{left:10px;bottom:-16px}
+ .hero p{font-size:17px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap">
+  <a href="#" class="logo"><img src="img/icon.png" alt=""><span>Design<span class="grad">Spark</span></span></a>
+  <div class="links"><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+  <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Hire me</a>
+ </div>
+</nav>
+
+<header class="hero">
+ <div class="wrap">
+  <div>
+   <div class="pill">🍽️ Restaurants · Cafes · Small Businesses</div>
+   <h1>Websites that bring you <span class="grad">more customers</span></h1>
+   <p>I design and build modern, fast, mobile-friendly websites with online menus, WhatsApp ordering and Google Maps, so customers can find you and order in seconds.</p>
+   <div class="cta">
+    <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Start your project →</a>
+    <a class="btn btn-ghost" href="#work">See my work</a>
+   </div>
+  </div>
+  <div class="hero-img">
+   <img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul restaurant website shown on laptop and phone" width="1280" height="769">
+   <div class="badge"><b>●</b> Perfect on every phone</div>
+  </div>
+ </div>
+</header>
+
+<section>
+ <div class="wrap center">
+  <span class="eyebrow">What you get</span>
+  <h2>Everything a restaurant website needs</h2>
+  <p class="lead">No heavy page builders. Clean, fast code that looks great and works on every device.</p>
+  <div class="features" style="text-align:left">
+   <div class="f"><div class="ic">📋</div><h3>Online menu</h3><p>Your full menu with prices, photos and categories.</p></div>
+   <div class="f"><div class="ic">💬</div><h3>WhatsApp ordering</h3><p>Customers pick dishes and send the order to your WhatsApp.</p></div>
+   <div class="f"><div class="ic">📍</div><h3>Maps & click-to-call</h3><p>One tap to call you or get directions to your door.</p></div>
+   <div class="f"><div class="ic">⚡</div><h3>Fast & mobile-first</h3><p>Loads quickly and looks perfect on phones, tablets and laptops.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="work">
+ <div class="wrap">
+  <div class="center">
+   <span class="eyebrow">Portfolio</span>
+   <h2>Recent restaurant websites</h2>
+   <p class="lead">Each one is designed around the restaurant's food, brand and customers.</p>
+  </div>
+  <div class="grid">
+   <div class="proj wide"><img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul website" loading="lazy" width="1280" height="769"><div class="body"><h3>Sultan Istanbul</h3><p>Turkish platters, shawaya and a rooftop on GT Road. Rich, palace-style design with menu and WhatsApp ordering.</p><span class="tag">Concept design</span></div></div>
+   <div class="proj"><img src="img/zilla-bite.jpg" alt="Zilla Bite website" loading="lazy" width="1280" height="769"><div class="body"><h3>Zilla Bite</h3><p>Steaks, sizzlers and pizza for families, with video hero and kids area.</p><span class="tag">Concept design</span></div></div>
+   <div class="proj"><img src="img/al-arabian-mandi.jpg" alt="Al Arabian Mandi website" loading="lazy" width="1280" height="769"><div class="body"><h3>Al Arabian Mandi</h3><p>Arabic mandi and Shinwari karahi, with a warm heritage look.</p><span class="tag">Concept design</span></div></div>
+   <div class="proj"><img src="img/bellas.jpg" alt="Bella's website" loading="lazy" width="1280" height="769"><div class="body"><h3>Bella's</h3><p>Pizza, pasta and shakes till 2 AM, with tap-to-add menu and cart.</p><span class="tag">Concept design</span></div></div>
+   <div class="proj"><img src="img/flame-up.jpg" alt="Flame Up website" loading="lazy" width="1280" height="769"><div class="body"><h3>Flame Up</h3><p>Bold fast-food brand with deals, combos and rooftop dining.</p><span class="tag">Concept design</span></div></div>
+  </div>
+  <p class="note">Concept designs built for local restaurants in Haripur, Pakistan, to show what's possible.</p>
+ </div>
+</section>
+
+<section id="pricing">
+ <div class="wrap">
+  <div class="center">
+   <span class="eyebrow">Pricing</span>
+   <h2>Simple, honest packages</h2>
+   <p class="lead">Pick a package, or message me and I'll suggest the best fit for your business.</p>
+  </div>
+  <div class="prices">
+   <div class="price">
+    <h3>Starter Page</h3><div class="amt">$45</div><div class="d">A clean one-page website</div>
+    <ul><li>1 page</li><li>Hero, about, menu highlights</li><li>Contact & Google Maps</li><li>Mobile responsive</li><li>2 revisions · 3 days</li></ul>
+    <a class="btn btn-ghost" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Starter</a>
+   </div>
+   <div class="price pop">
+    <h3>Menu + Ordering</h3><div class="amt">$85</div><div class="d">Full menu and WhatsApp orders</div>
+    <ul><li>Full online menu with prices</li><li>WhatsApp ordering</li><li>Gallery & deals section</li><li>Mobile responsive</li><li>3 revisions · 5 days</li></ul>
+    <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Menu + Ordering</a>
+   </div>
+   <div class="price">
+    <h3>Complete Website</h3><div class="amt">$150</div><div class="d">Multi-page site, live online</div>
+    <ul><li>Up to 5 pages</li><li>Everything in Menu + Ordering</li><li>SEO setup</li><li>Free hosting setup</li><li>Unlimited revisions · 7 days</li></ul>
+    <a class="btn btn-ghost" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Complete</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="process">
+ <div class="wrap">
+  <div class="center">
+   <span class="eyebrow">How it works</span>
+   <h2>From idea to live website</h2>
+  </div>
+  <div class="steps">
+   <div class="step"><h3>Share your details</h3><p>Send your logo, menu, photos and contact info.</p></div>
+   <div class="step"><h3>I design & build</h3><p>I create a website that fits your brand and food.</p></div>
+   <div class="step"><h3>You review</h3><p>Tell me what to change. I adjust until you're happy.</p></div>
+   <div class="step"><h3>Go live</h3><p>You get the final files, and help putting it online.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="wrap">
+  <div class="center"><span class="eyebrow">FAQ</span><h2>Questions</h2></div>
+  <div class="faq">
+   <details><summary>Will my website work on mobile phones?</summary><p>Yes. Every website is fully responsive and tested on phones, tablets and desktops before delivery.</p></details>
+   <details><summary>Can customers order food through the website?</summary><p>Yes. Customers pick dishes and the order is sent to your WhatsApp with their name and address. No monthly app fees.</p></details>
+   <details><summary>Do you use WordPress?</summary><p>No. I build with clean HTML, CSS and JavaScript, using modern AI-assisted tools, so your site is fast, secure and cheap to host.</p></details>
+   <details><summary>Do you provide hosting?</summary><p>Free hosting setup is included in the Complete package. You buy your own domain name, and I'll help you connect it.</p></details>
+   <details><summary>Can I update my menu later?</summary><p>Yes. The menu is easy to edit, and I can make updates for you later as a small order.</p></details>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:20px">
+ <div class="wrap">
+  <div class="final">
+   <h2>Ready to bring in <span class="grad">more customers?</span></h2>
+   <p>Send me a message on Fiverr and tell me about your business. I usually reply within an hour.</p>
+   <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Message me on Fiverr →</a>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <a href="#" class="logo" style="font-size:17px"><img src="img/icon.png" alt="" style="width:28px;height:28px"><span>Design<span class="grad">Spark</span> Studio</span></a>
+  <div>© 2026 DesignSpark Studio · Abdul Majid · Pakistan</div>
+ </div>
+</footer>
+
+</body>
+</html>
