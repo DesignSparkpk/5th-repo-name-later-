@@ -56,14 +56,14 @@ section{padding:120px 0;position:relative}
 .nav .btn{height:40px;padding:0 18px;font-size:14px}
 
 /* hero */
-.hero{padding:170px 0 60px;text-align:center}
+.hero{padding:150px 0 60px;text-align:center}
 .avail{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 14px 6px 8px;border-radius:999px}
 .avail i{width:20px;height:20px;border-radius:50%;background:rgba(34,197,94,.15);display:grid;place-items:center}
 .avail i::after{content:"";width:7px;height:7px;border-radius:50%;background:#22C55E;box-shadow:0 0 10px #22C55E;animation:pulse 2s infinite}
 @keyframes pulse{50%{opacity:.4}}
-h1{font-size:clamp(44px,8.2vw,100px);line-height:1;letter-spacing:-4px;font-weight:700;margin:26px auto 24px;max-width:1000px}
+h1{font-size:clamp(40px,7.4vw,92px);line-height:1;letter-spacing:-4px;font-weight:700;margin:22px auto 18px;max-width:1000px}
 h1 .serif{letter-spacing:-2px}
-.hero p.sub{color:var(--muted);font-size:clamp(17px,2vw,20px);max-width:620px;margin:0 auto 34px}
+.hero p.sub{color:var(--muted);font-size:clamp(16px,2vw,19px);max-width:620px;margin:0 auto 26px}
 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .hero-stage{position:relative;margin:80px auto 0;max-width:1060px;height:500px;perspective:1600px}
 .hero-stage::before{content:"";position:absolute;left:10%;right:10%;top:20%;bottom:-10%;background:radial-gradient(closest-side,rgba(255,138,61,.35),transparent);filter:blur(60px)}
@@ -72,6 +72,13 @@ h1 .serif{letter-spacing:-2px}
 .shot.main{left:50%;top:0;width:66%;transform:translateX(-50%) rotateX(8deg);z-index:3}
 .shot.l{left:0;top:110px;width:38%;transform:rotate(-6deg);z-index:2;opacity:.85}
 .shot.r{right:0;top:110px;width:38%;transform:rotate(6deg);z-index:2;opacity:.85}
+.svc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:900px;margin:0 auto 30px;text-align:left}
+.sv{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.03);transition:border-color .2s,background .2s,transform .2s}
+.sv:hover{border-color:rgba(255,138,61,.45);background:rgba(255,138,61,.06);transform:translateY(-2px)}
+.sv i{font-style:normal;font-size:20px;width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.05)}
+.sv b{display:block;font-size:14px;font-weight:600;letter-spacing:-.2px;line-height:1.25}
+.sv small{color:var(--muted);font-size:12.5px}
+.shot.r img{aspect-ratio:1280/769;object-fit:cover;object-position:left top}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.015)}
 .fact{padding:26px 22px;text-align:left;border-right:1px solid var(--line)}
 .fact:last-child{border-right:0}
@@ -187,10 +194,13 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
  .step{grid-template-columns:70px 1fr}.step p{grid-column:2}
  .facts{grid-template-columns:repeat(2,1fr)}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
  .hero-stage{height:420px}
+ .svc-row{grid-template-columns:1fr 1fr;max-width:560px}
 }
 @media (max-width:640px){
  section{padding:84px 0}
- .hero{padding:130px 0 30px}
+ .hero{padding:104px 0 30px}
+ .svc-row{gap:8px;margin-bottom:22px}.sv{padding:10px;gap:9px;border-radius:14px}.sv i{width:32px;height:32px;font-size:17px;border-radius:9px}.sv b{font-size:13px}.sv small{font-size:11.5px}
+ .hero p.sub{margin-bottom:20px}
  h1{letter-spacing:-2.5px}
  .hero-stage{height:auto;margin-top:50px}
  .shot.main{position:relative;left:0;width:100%;transform:none}
@@ -223,8 +233,14 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
 <section class="hero">
  <div class="wrap">
   <div class="avail rv"><i></i>Available for new projects</div>
-  <h1 class="rv">Websites that turn visitors into <span class="serif og">customers</span></h1>
-  <p class="sub rv">I design and build fast, modern websites, landing pages and calculators for small businesses. Clean code, mobile-first, delivered quickly.</p>
+  <h1 class="rv">I build websites that bring you <span class="serif og">customers</span></h1>
+  <p class="sub rv">Web design studio for small businesses. Fast, modern, mobile-first.</p>
+  <div class="svc-row rv">
+   <a class="sv" href="#work" data-f="rest"><i>🍽️</i><span><b>Restaurant websites</b><small>from $80</small></span></a>
+   <a class="sv" href="#work" data-f="land"><i>⚡</i><span><b>Landing pages</b><small>24h · from $25</small></span></a>
+   <a class="sv" href="calculators/"><i>🧮</i><span><b>Website calculators</b><small>from $30</small></span></a>
+   <a class="sv" href="img/cv-sample-1.jpg" target="_blank" rel="noopener"><i>📄</i><span><b>CV & resume design</b><small>from $10</small></span></a>
+  </div>
   <div class="cta rv">
    <a class="btn btn-w" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Start your project <span class="arrow">→</span></a>
    <a class="btn btn-g" href="#work">View my work</a>
@@ -232,7 +248,7 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
   <div class="hero-stage rv">
    <div class="shot l"><img src="img/brightsmile-dental.jpg" alt="Dental clinic landing page" width="1280" height="769"></div>
    <div class="shot main"><img src="img/sultan-istanbul.jpg" alt="Restaurant website on laptop and phone" width="1280" height="769"></div>
-   <div class="shot r"><img src="img/ironpeak-fitness.jpg" alt="Fitness landing page" width="1280" height="769"></div>
+   <div class="shot r"><img src="img/calc-quote.jpg" alt="Website quote calculator" width="900" height="500"></div>
   </div>
   <div class="facts rv">
    <div class="fact"><b>11+</b><span>Designs in portfolio</span></div>
@@ -404,7 +420,7 @@ const fbs=document.querySelectorAll('.fb'),works=[...document.querySelectorAll('
 function filt(f){document.querySelector('.works').classList.toggle('open',f!=='all');fbs.forEach(b=>b.classList.toggle('on',b.dataset.f===f));works.forEach(w=>{const show=f==='all'||w.dataset.c===f;w.classList.toggle('hide',!show);w.classList.toggle('big',show&&f==='all'&&w===works[0]);if(show)w.classList.add('in')})}
 fbs.forEach(b=>b.addEventListener('click',()=>filt(b.dataset.f)));
 document.getElementById('showall').addEventListener('click',()=>{document.querySelector('.works').classList.add('open');works.forEach(w=>w.classList.add('in'))});
-document.querySelectorAll('.tile[data-f]').forEach(t=>t.addEventListener('click',()=>filt(t.dataset.f)));
+document.querySelectorAll('.tile[data-f],.sv[data-f]').forEach(t=>t.addEventListener('click',()=>filt(t.dataset.f)));
 
 document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=>{const q=b.parentElement,open=!q.classList.contains('open');document.querySelectorAll('.q').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(open){q.classList.add('open');b.setAttribute('aria-expanded','true')}}));
 </script>
