@@ -91,7 +91,7 @@ h1{font-size:clamp(38px,6vw,62px);line-height:1.07;font-weight:800;letter-spacin
 
 /* services */
 .trustline{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px;font-weight:500}
-.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
 .svc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column}
 .svc.hot{border-color:rgba(255,181,71,.55);box-shadow:0 20px 60px rgba(255,150,60,.12)}
 .svc .ic{font-size:30px;margin-bottom:14px}
@@ -135,7 +135,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 @media (max-width:900px){
  .hero .wrap{grid-template-columns:1fr}
  .features,.steps{grid-template-columns:repeat(2,1fr)}
- .svcs{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+ .svcs{grid-template-columns:1fr 1fr}
  .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin:0 -4%;padding-left:4%;padding-right:4%;scrollbar-width:none}
  .rail::-webkit-scrollbar{display:none}
  .rail .card{flex:0 0 78%;scroll-snap-align:center}
@@ -149,10 +149,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
  .hero{padding:56px 0 50px}
  .grid,.features{grid-template-columns:1fr}
  .steps{gap:10px}.step{padding:18px}.step::before{width:34px;height:34px;margin-bottom:10px}.step h3{font-size:16px}.step p{font-size:14px}
+ .svcs{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
  .svc{padding:22px}
  .rowtitle{margin-top:34px}
  .badge{left:10px;bottom:-16px}
  .hero p{font-size:17px}
+ .pill{font-size:12px;padding:6px 12px;gap:6px}
 }
 </style>
 </head>
@@ -169,7 +171,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <header class="hero">
  <div class="wrap">
   <div>
-   <div class="pill">✦ Websites · Landing Pages · Calculators</div>
+   <div class="pill">✦ Websites · Landing Pages · Calculators · CVs</div>
    <h1>Websites that bring you <span class="grad">more customers</span></h1>
    <p>I design and build fast, modern websites and tools for small businesses, so customers can find you, trust you and contact you in seconds.</p>
    <div class="cta">
@@ -210,6 +212,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
     <p>Instant price, ROI or fitness calculators that work on any website.</p>
     <div class="from">from <b>$30</b></div>
     <a class="more" href="calculators/">Try live demos →</a>
+   </div>
+   <div class="svc">
+    <div class="ic">📄</div><h3>CV & resume design</h3>
+    <p>Professionally written, ATS-friendly CV in Word and PDF, ready in 24 hours.</p>
+    <div class="from">from <b>$10</b></div>
+    <a class="more" href="img/cv-sample-1.jpg" target="_blank" rel="noopener">See a sample →</a>
    </div>
   </div>
  </div>
