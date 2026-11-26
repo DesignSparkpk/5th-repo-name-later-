@@ -9,9 +9,8 @@
 <style>
 :root{--bg:#0B0F19;--panel:#111827;--panel2:#0F1625;--line:rgba(148,163,184,.14);--text:#F8FAFC;--muted:#94A3B8;--em:#10B981;--cy:#22D3EE;--grad:linear-gradient(135deg,#10B981,#22D3EE);--glow:0 0 0 1px rgba(34,211,238,.18),0 20px 60px -20px rgba(16,185,129,.35)}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
 body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(1200px 600px at 85% -10%,rgba(34,211,238,.10),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(16,185,129,.10),transparent 60%),var(--bg);color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;min-height:100vh;-webkit-font-smoothing:antialiased}
-.app{width:min(1080px,100%);display:flex;flex-direction:column;gap:14px}
+.app{margin:auto;width:min(1080px,100%);display:flex;flex-direction:column;gap:14px}
 header{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .brand{font-family:"Plus Jakarta Sans";font-weight:800;font-size:20px;letter-spacing:-.3px;display:flex;align-items:center;gap:9px}
 .brand i{width:28px;height:28px;border-radius:8px;background:var(--grad);display:grid;place-items:center;font-style:normal;color:#04111a;font-size:15px}
@@ -216,7 +215,7 @@ function tween(el,to,fmt){
 /* slider fill */
 function fill(r){r.style.setProperty('--p',((r.value-r.min)/(r.max-r.min)*100)+'%')}
 /* pill groups */
-function pills(id,cb){const g=$(id);g.addEventListener('click',e=>{const b=e.target.closest('.pill');if(!b)return;g.querySelectorAll('.pill').forEach(x=>x.classList.toggle('on',x===b));cb()});}
+function pills(id,cb){const g=$(id);g.addEventListener('click',e=>{const b=e.target.closest('.pill');if(!b||b.classList.contains('on'))return;g.querySelectorAll('.pill').forEach(x=>x.classList.toggle('on',x===b));cb()});}
 const pv=id=>$(id+' .pill.on').dataset.v;
 
 /* tabs */
@@ -265,9 +264,10 @@ function calcR(){
 /* 3. macros */
 function setUnits(u){
  const w=$('#m-w'),h=$('#m-h');
- const kgVal=u==='kg'?+w.value*0.4536:+w.value/0.4536, cmVal=u==='kg'?+h.value*2.54:+h.value/2.54;
+ const ex=el=>el.dataset.exact!==undefined?+el.dataset.exact:+el.value;
+ const kgVal=u==='kg'?ex(w)*0.4536:ex(w)/0.4536, cmVal=u==='kg'?ex(h)*2.54:ex(h)/2.54;
  if(u==='kg'){w.min=40;w.max=160;h.min=140;h.max=205}else{w.min=90;w.max=350;h.min=55;h.max=80}
- w.value=Math.round(kgVal);h.value=Math.round(cmVal);fill(w);fill(h);
+ w.value=Math.round(kgVal);h.value=Math.round(cmVal);w.dataset.exact=kgVal;h.dataset.exact=cmVal;fill(w);fill(h);
 }
 function calcM(){
  const u=pv('#m-unit'),sex=pv('#m-sex'),age=+$('#m-age').value,act=+$('#m-act').value,goal=pv('#m-goal');
@@ -284,7 +284,7 @@ function calcM(){
  tween($('#m-p'),p,v=>num(v)+' g');tween($('#m-c'),c,v=>num(v)+' g');tween($('#m-f'),f,v=>num(v)+' g');
  const mx=Math.max(p,c,f);$('#m-pb').style.width=p/mx*100+'%';$('#m-cb').style.width=c/mx*100+'%';$('#m-fb').style.width=f/mx*100+'%';
 }
-['#m-age','#m-w','#m-h'].forEach(i=>$(i).addEventListener('input',e=>{fill(e.target);calcM()}));
+['#m-age','#m-w','#m-h'].forEach(i=>$(i).addEventListener('input',e=>{delete e.target.dataset.exact;fill(e.target);calcM()}));
 $('#m-act').addEventListener('change',calcM);
 pills('#m-unit',()=>{setUnits(pv('#m-unit'));calcM()});pills('#m-sex',calcM);pills('#m-goal',calcM);
 
