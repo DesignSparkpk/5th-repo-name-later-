@@ -160,7 +160,7 @@ select{width:100%;background:var(--panel2);color:var(--text);border:1px solid va
    <div class="card out">
     <div class="kicker">Projected monthly revenue</div>
     <div class="big" id="r-rev">$0</div>
-    <div class="per" id="r-orders">0 orders per month</div>
+    <div class="per" id="r-orders">0 visitors → 0 orders per month</div>
     <div class="stats">
      <div class="stat"><div class="v" id="r-profit">$0</div><div class="k">Net profit after ads</div></div>
      <div class="stat"><div class="v" id="r-roi">0%</div><div class="k">Return on ad spend</div></div>
@@ -267,7 +267,7 @@ function calcR(){
  tween($('#r-rev'),rev,money);tween($('#r-profit'),profit,v=>(v<0?'−':'')+money(Math.abs(v)));tween($('#r-roi'),roas,v=>num(v)+'%');
  tween($('#r-b1'),spend,money);tween($('#r-b2'),rev,money);
  $('#r-profit').style.color=profit<0?'#F87171':'#6EE7B7';
- $('#r-orders').textContent=num(orders)+' orders per month';
+ $('#r-orders').textContent=num(spend/CPC)+' visitors → '+num(orders)+' orders per month';
  const mx=Math.max(spend,rev);$('#r-bar1').style.width=(spend/mx*100)+'%';$('#r-bar2').style.width=(rev/mx*100)+'%';
 }
 ['#r-spend','#r-conv','#r-aov'].forEach(i=>$(i).addEventListener('input',e=>{fill(e.target);calcR()}));
