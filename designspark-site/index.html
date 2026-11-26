@@ -88,6 +88,27 @@ h1{font-size:clamp(38px,6vw,62px);line-height:1.07;font-weight:800;letter-spacin
 .price li::before{content:"✓";color:var(--green);font-weight:700;margin-right:10px}
 .price .btn{justify-content:center}
 
+
+/* services */
+.trustline{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px;font-weight:500}
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column}
+.svc.hot{border-color:rgba(255,181,71,.55);box-shadow:0 20px 60px rgba(255,150,60,.12)}
+.svc .ic{font-size:30px;margin-bottom:14px}
+.svc h3{font-size:20px;margin-bottom:8px}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc .from{margin-top:18px;color:var(--muted);font-size:15px}.svc .from b{font-size:28px;color:var(--text);margin-left:4px}
+.svc .more{margin-top:10px;color:var(--accent);font-weight:600;font-size:15px}
+/* portfolio rails */
+.rowtitle{font-size:20px;margin:44px 0 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.rowtitle a{font-size:15px;color:var(--accent);font-weight:600}
+.rail{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,181,71,.4)}
+.card img{aspect-ratio:16/10;object-fit:cover;width:100%}
+@media (min-width:901px){.card.extra{display:none}}
+.card .body{padding:14px 16px 16px}.card h4{font-size:16px}.card p{color:var(--muted);font-size:14px}
+
 /* steps */
 #process{background:var(--bg2)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;counter-reset:s}
@@ -114,6 +135,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 @media (max-width:900px){
  .hero .wrap{grid-template-columns:1fr}
  .features,.steps{grid-template-columns:repeat(2,1fr)}
+ .svcs{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
+ .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin:0 -4%;padding-left:4%;padding-right:4%;scrollbar-width:none}
+ .rail::-webkit-scrollbar{display:none}
+ .rail .card{flex:0 0 78%;scroll-snap-align:center}
  .prices{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
  .price.pop{margin:10px 0}
  .links{display:none}
@@ -122,7 +147,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
  #calculators .grid{grid-template-columns:1fr!important}
  section{padding:70px 0}
  .hero{padding:56px 0 50px}
- .grid,.features,.steps{grid-template-columns:1fr}
+ .grid,.features{grid-template-columns:1fr}
+ .steps{gap:10px}.step{padding:18px}.step::before{width:34px;height:34px;margin-bottom:10px}.step h3{font-size:16px}.step p{font-size:14px}
+ .svc{padding:22px}
+ .rowtitle{margin-top:34px}
  .badge{left:10px;bottom:-16px}
  .hero p{font-size:17px}
 }
@@ -133,7 +161,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <nav>
  <div class="wrap">
   <a href="#" class="logo"><img src="img/icon.png" alt=""><span>Design<span class="grad">Spark</span></span></a>
-  <div class="links"><a href="#work">Work</a><a href="#calculators">Calculators</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+  <div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="calculators/">Calculators</a><a href="#faq">FAQ</a></div>
   <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Hire me</a>
  </div>
 </nav>
@@ -141,31 +169,48 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 <header class="hero">
  <div class="wrap">
   <div>
-   <div class="pill">🍽️ Restaurants · Cafes · Small Businesses</div>
+   <div class="pill">✦ Websites · Landing Pages · Calculators</div>
    <h1>Websites that bring you <span class="grad">more customers</span></h1>
-   <p>I design and build modern, fast, mobile-friendly websites with online menus, WhatsApp ordering and Google Maps, so customers can find you and order in seconds.</p>
+   <p>I design and build fast, modern websites and tools for small businesses, so customers can find you, trust you and contact you in seconds.</p>
    <div class="cta">
     <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Start your project →</a>
     <a class="btn btn-ghost" href="#work">See my work</a>
    </div>
+   <div class="trustline"><span>⚡ Fast delivery</span><span>📱 Mobile-first</span><span>🔁 Revisions included</span></div>
   </div>
   <div class="hero-img">
-   <img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul restaurant website shown on laptop and phone" width="1280" height="769">
+   <img src="img/sultan-istanbul.jpg" alt="Restaurant website shown on laptop and phone" width="1280" height="769">
    <div class="badge"><b>●</b> Perfect on every phone</div>
   </div>
  </div>
 </header>
 
-<section>
- <div class="wrap center">
-  <span class="eyebrow">What you get</span>
-  <h2>Everything a restaurant website needs</h2>
-  <p class="lead">No heavy page builders. Clean, fast code that looks great and works on every device.</p>
-  <div class="features" style="text-align:left">
-   <div class="f"><div class="ic">📋</div><h3>Online menu</h3><p>Your full menu with prices, photos and categories.</p></div>
-   <div class="f"><div class="ic">💬</div><h3>WhatsApp ordering</h3><p>Customers pick dishes and send the order to your WhatsApp.</p></div>
-   <div class="f"><div class="ic">📍</div><h3>Maps & click-to-call</h3><p>One tap to call you or get directions to your door.</p></div>
-   <div class="f"><div class="ic">⚡</div><h3>Fast & mobile-first</h3><p>Loads quickly and looks perfect on phones, tablets and laptops.</p></div>
+<section id="services">
+ <div class="wrap">
+  <div class="center">
+   <span class="eyebrow">Services</span>
+   <h2>What I can build for you</h2>
+   <p class="lead">Clean, hand-built code. No heavy page builders and no monthly fees.</p>
+  </div>
+  <div class="svcs">
+   <div class="svc">
+    <div class="ic">🍽️</div><h3>Restaurant websites</h3>
+    <p>Online menu, WhatsApp ordering, gallery, deals and Google Maps.</p>
+    <div class="from">from <b>$80</b></div>
+    <a class="more" href="#work">See examples →</a>
+   </div>
+   <div class="svc hot">
+    <div class="ic">⚡</div><h3>Landing pages in 24h</h3>
+    <p>One fast page for clinics, gyms, apps or any business, built to get calls and sign-ups.</p>
+    <div class="from">from <b>$25</b></div>
+    <a class="more" href="#work">See examples →</a>
+   </div>
+   <div class="svc">
+    <div class="ic">🧮</div><h3>Calculators & quote widgets</h3>
+    <p>Instant price, ROI or fitness calculators that work on any website.</p>
+    <div class="from">from <b>$30</b></div>
+    <a class="more" href="calculators/">Try live demos →</a>
+   </div>
   </div>
  </div>
 </section>
@@ -174,59 +219,28 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
  <div class="wrap">
   <div class="center">
    <span class="eyebrow">Portfolio</span>
-   <h2>Recent restaurant websites</h2>
-   <p class="lead">Each one is designed around the restaurant's food, brand and customers.</p>
+   <h2>Recent work</h2>
+   <p class="lead">Concept designs that show what I can build for your business.</p>
   </div>
-  <div class="grid">
-   <div class="proj wide"><img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul website" loading="lazy" width="1280" height="769"><div class="body"><h3>Sultan Istanbul</h3><p>Turkish platters, shawaya and a rooftop on GT Road. Rich, palace-style design with menu and WhatsApp ordering.</p><span class="tag">Concept design</span></div></div>
-   <div class="proj"><img src="img/zilla-bite.jpg" alt="Zilla Bite website" loading="lazy" width="1280" height="769"><div class="body"><h3>Zilla Bite</h3><p>Steaks, sizzlers and pizza for families, with video hero and kids area.</p><span class="tag">Concept design</span></div></div>
-   <div class="proj"><img src="img/al-arabian-mandi.jpg" alt="Al Arabian Mandi website" loading="lazy" width="1280" height="769"><div class="body"><h3>Al Arabian Mandi</h3><p>Arabic mandi and Shinwari karahi, with a warm heritage look.</p><span class="tag">Concept design</span></div></div>
-   <div class="proj"><img src="img/bellas.jpg" alt="Bella's website" loading="lazy" width="1280" height="769"><div class="body"><h3>Bella's</h3><p>Pizza, pasta and shakes till 2 AM, with tap-to-add menu and cart.</p><span class="tag">Concept design</span></div></div>
-   <div class="proj"><img src="img/flame-up.jpg" alt="Flame Up website" loading="lazy" width="1280" height="769"><div class="body"><h3>Flame Up</h3><p>Bold fast-food brand with deals, combos and rooftop dining.</p><span class="tag">Concept design</span></div></div>
+  <h3 class="rowtitle">Restaurant websites</h3>
+  <div class="rail">
+   <div class="card"><img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul website" loading="lazy" width="1280" height="769"><div class="body"><h4>Sultan Istanbul</h4><p>Turkish restaurant · menu & WhatsApp ordering</p></div></div>
+   <div class="card"><img src="img/zilla-bite.jpg" alt="Zilla Bite website" loading="lazy" width="1280" height="769"><div class="body"><h4>Zilla Bite</h4><p>Steakhouse · video hero & kids area</p></div></div>
+   <div class="card"><img src="img/bellas.jpg" alt="Bella's website" loading="lazy" width="1280" height="769"><div class="body"><h4>Bella's</h4><p>Pizza & pasta · tap-to-add cart</p></div></div>
+   <div class="card extra"><img src="img/al-arabian-mandi.jpg" alt="Al Arabian Mandi website" loading="lazy" width="1280" height="769"><div class="body"><h4>Al Arabian Mandi</h4><p>Arabic & Shinwari · heritage look</p></div></div>
+   <div class="card extra"><img src="img/flame-up.jpg" alt="Flame Up website" loading="lazy" width="1280" height="769"><div class="body"><h4>Flame Up</h4><p>Fast food · deals & combos</p></div></div>
   </div>
-  <p class="note">Concept designs built for local restaurants in Haripur, Pakistan, to show what's possible.</p>
- </div>
-</section>
-
-<section id="calculators">
- <div class="wrap">
-  <div class="center">
-   <span class="eyebrow">Calculators & quote widgets</span>
-   <h2>Give visitors a price <span class="grad">in seconds</span></h2>
-   <p class="lead">Custom calculators that turn visitors into leads. Pay once, own it forever, no monthly plugin fees. Try the live demos.</p>
+  <h3 class="rowtitle">Landing pages</h3>
+  <div class="rail">
+   <div class="card"><img src="img/brightsmile-dental.jpg" alt="BrightSmile dental landing page" loading="lazy" width="1280" height="769"><div class="body"><h4>BrightSmile Dental</h4><p>Clinic · booking form & reviews</p></div></div>
+   <div class="card"><img src="img/ironpeak-fitness.jpg" alt="IronPeak fitness landing page" loading="lazy" width="1280" height="769"><div class="body"><h4>IronPeak Fitness</h4><p>Gym · programs & pricing</p></div></div>
+   <div class="card"><img src="img/flowly-saas.jpg" alt="Flowly app landing page" loading="lazy" width="1280" height="769"><div class="body"><h4>Flowly</h4><p>Software app · free trial sign-ups</p></div></div>
   </div>
-  <div class="grid" style="grid-template-columns:repeat(3,1fr)">
-   <a class="proj" href="calculators/"><img src="img/calc-quote.jpg" alt="Instant quote calculator demo" loading="lazy" width="900" height="500"><div class="body"><h3>Instant Quote</h3><p>Live prices for cleaning and home services.</p></div></a>
-   <a class="proj" href="calculators/"><img src="img/calc-roi.jpg" alt="Marketing ROI calculator demo" loading="lazy" width="900" height="500"><div class="body"><h3>Marketing ROI</h3><p>Revenue and return for agencies and stores.</p></div></a>
-   <a class="proj" href="calculators/"><img src="img/calc-macro.jpg" alt="Calorie and macro calculator demo" loading="lazy" width="900" height="500"><div class="body"><h3>Calorie & Macros</h3><p>Daily targets for fitness coaches.</p></div></a>
-  </div>
-  <div class="center" style="margin-top:34px"><a class="btn btn-main" href="calculators/">Try the live calculators →</a></div>
- </div>
-</section>
-
-<section id="pricing">
- <div class="wrap">
-  <div class="center">
-   <span class="eyebrow">Pricing</span>
-   <h2>Simple, honest packages</h2>
-   <p class="lead">Pick a package, or message me and I'll suggest the best fit for your business.</p>
-  </div>
-  <div class="prices">
-   <div class="price">
-    <h3>Starter Page</h3><div class="amt">$80</div><div class="d">A clean one-page website</div>
-    <ul><li>1 page</li><li>Hero, about, menu highlights</li><li>Contact & Google Maps</li><li>Mobile responsive</li><li>2 revisions · 3 days</li></ul>
-    <a class="btn btn-ghost" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Starter</a>
-   </div>
-   <div class="price pop">
-    <h3>Menu + Ordering</h3><div class="amt">$110</div><div class="d">Full menu and WhatsApp orders</div>
-    <ul><li>Full online menu with prices</li><li>WhatsApp ordering</li><li>Gallery & deals section</li><li>Mobile responsive</li><li>3 revisions · 5 days</li></ul>
-    <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Menu + Ordering</a>
-   </div>
-   <div class="price">
-    <h3>Complete Website</h3><div class="amt">$160</div><div class="d">Multi-page site, live online</div>
-    <ul><li>Up to 5 pages</li><li>Everything in Menu + Ordering</li><li>SEO setup</li><li>Free hosting setup</li><li>Unlimited revisions · 7 days</li></ul>
-    <a class="btn btn-ghost" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Choose Complete</a>
-   </div>
+  <h3 class="rowtitle" id="calculators">Calculators <a href="calculators/">Try them live →</a></h3>
+  <div class="rail">
+   <a class="card" href="calculators/"><img src="img/calc-quote.jpg" alt="Instant quote calculator" loading="lazy" width="900" height="500"><div class="body"><h4>Instant Quote</h4><p>Cleaning & home services</p></div></a>
+   <a class="card" href="calculators/"><img src="img/calc-roi.jpg" alt="Marketing ROI calculator" loading="lazy" width="900" height="500"><div class="body"><h4>Marketing ROI</h4><p>Agencies & online stores</p></div></a>
+   <a class="card" href="calculators/"><img src="img/calc-macro.jpg" alt="Calorie and macro calculator" loading="lazy" width="900" height="500"><div class="body"><h4>Calorie & Macros</h4><p>Fitness coaches</p></div></a>
   </div>
  </div>
 </section>
@@ -235,13 +249,13 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
  <div class="wrap">
   <div class="center">
    <span class="eyebrow">How it works</span>
-   <h2>From idea to live website</h2>
+   <h2>Simple from start to finish</h2>
   </div>
   <div class="steps">
-   <div class="step"><h3>Share your details</h3><p>Send your logo, menu, photos and contact info.</p></div>
-   <div class="step"><h3>I design & build</h3><p>I create a website that fits your brand and food.</p></div>
-   <div class="step"><h3>You review</h3><p>Tell me what to change. I adjust until you're happy.</p></div>
-   <div class="step"><h3>Go live</h3><p>You get the final files, and help putting it online.</p></div>
+   <div class="step"><h3>Tell me about it</h3><p>Your business, goal, logo and content.</p></div>
+   <div class="step"><h3>I design & build</h3><p>Made for your brand, not a template.</p></div>
+   <div class="step"><h3>You review</h3><p>I adjust until you're happy.</p></div>
+   <div class="step"><h3>Go live</h3><p>Final files, plus help putting it online.</p></div>
   </div>
  </div>
 </section>
@@ -250,20 +264,20 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
  <div class="wrap">
   <div class="center"><span class="eyebrow">FAQ</span><h2>Questions</h2></div>
   <div class="faq">
-   <details><summary>Will my website work on mobile phones?</summary><p>Yes. Every website is fully responsive and tested on phones, tablets and desktops before delivery.</p></details>
-   <details><summary>Can customers order food through the website?</summary><p>Yes. Customers pick dishes and the order is sent to your WhatsApp with their name and address. No monthly app fees.</p></details>
-   <details><summary>Do you use WordPress?</summary><p>No. I build with clean HTML, CSS and JavaScript, using modern AI-assisted tools, so your site is fast, secure and cheap to host.</p></details>
-   <details><summary>Do you provide hosting?</summary><p>Free hosting setup is included in the Complete package. You buy your own domain name, and I'll help you connect it.</p></details>
-   <details><summary>Can I update my menu later?</summary><p>Yes. The menu is easy to edit, and I can make updates for you later as a small order.</p></details>
+   <details><summary>Will it work on mobile phones?</summary><p>Yes. Everything I build is fully responsive and tested on phones, tablets and desktops before delivery.</p></details>
+   <details><summary>How do you build your projects?</summary><p>I hand-build with clean HTML, CSS and JavaScript, using modern AI-assisted tools to work fast. I personally test every page and calculator before delivery.</p></details>
+   <details><summary>Do you use WordPress?</summary><p>No page builders. Your site is light, fast and cheap to host. Calculators can still be added to WordPress, Shopify, Wix or Squarespace sites.</p></details>
+   <details><summary>Can you put my website online?</summary><p>Yes. Hosting setup is included in bigger packages. You buy your own domain name, and I help you connect it.</p></details>
+   <details><summary>How do I order?</summary><p>Message me on Fiverr with your idea. I'll reply quickly and suggest the best package for you. Payment is safe through Fiverr.</p></details>
   </div>
  </div>
 </section>
 
-<section style="padding-top:20px">
+<section style="padding-top:10px">
  <div class="wrap">
   <div class="final">
    <h2>Ready to bring in <span class="grad">more customers?</span></h2>
-   <p>Send me a message on Fiverr and tell me about your business. I usually reply within an hour.</p>
+   <p>Tell me about your business on Fiverr. I usually reply within an hour.</p>
    <a class="btn btn-main" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Message me on Fiverr →</a>
   </div>
  </div>
