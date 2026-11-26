@@ -23,6 +23,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:14px;fl
 .trust b{color:var(--em);font-weight:600}
 .trust .dot{width:6px;height:6px;border-radius:50%;background:var(--em);box-shadow:0 0 10px var(--em)}
 .stage{position:relative}
+@media(min-width:821px){body{justify-content:flex-start;padding-top:max(18px,calc(50vh - 290px))}}
 .calc{display:none;grid-template-columns:1.05fr .95fr;gap:14px;animation:in .45s ease}
 .calc.on{display:grid}
 @keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
