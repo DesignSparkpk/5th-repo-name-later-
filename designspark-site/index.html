@@ -124,25 +124,30 @@ h1 .serif{letter-spacing:-2px}
 .chips span{font-size:13px;border:1px solid var(--line2);border-radius:999px;padding:6px 12px;color:var(--muted)}
 
 /* work */
-.filters{display:flex;gap:6px;margin-top:36px;flex-wrap:wrap}
-.fb{height:40px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font:500 14px Geist,sans-serif;cursor:pointer;transition:.2s}
-.fb:hover{color:var(--text);border-color:var(--line2)}
-.fb.on{background:#FAFAFA;color:#09090B;border-color:#FAFAFA}
-.works{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.row{margin-top:46px}
+.row-h{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}
+.row-h h3{font-size:21px;font-weight:600;letter-spacing:-.4px}.row-h small{font-size:14px;color:var(--dim);font-weight:500;margin-left:8px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line2);background:transparent;color:var(--text);font-size:16px;cursor:pointer;transition:.2s}
+.arrows button:hover{background:#FAFAFA;color:#09090B}
+.arrows button:disabled{opacity:.3;cursor:default;background:transparent;color:var(--text)}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px}
+.rail::-webkit-scrollbar{display:none}
+.rail .work{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start}
+#cv .rail .work{flex-basis:calc((100% - 54px)/4)}
+.cvim{aspect-ratio:3/4!important}
+.demo{margin-top:46px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);box-shadow:0 40px 100px -30px rgba(34,211,238,.25);background:#0B0F19}
+.demo iframe{display:block;width:100%;height:700px;border:0}
 .work{display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:var(--s1);border:1px solid var(--line);transition:border-color .25s,opacity .8s,transform .8s}
 .work:hover{border-color:var(--line2)}
 .work .im{overflow:hidden;aspect-ratio:16/10;background:#111}
-.work img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.work img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .work:hover img{transform:scale(1.05)}
 .work .meta{padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
 .work h4{font-size:16px;font-weight:600;letter-spacing:-.2px}
 .work .meta span{font-size:12px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
-.work.hide{display:none}
-.work.big{grid-column:span 2;grid-row:span 2}.work.big .im{aspect-ratio:auto;flex:1}
 .note{margin-top:22px;color:var(--dim);font-size:13px}
 
-.cvim img{object-position:top}
-.showall{display:none;margin:22px auto 0}
 .hero-stage{height:440px}
 /* process */
 .steps{margin-top:56px;border-top:1px solid var(--line)}
@@ -189,7 +194,8 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
  .t-rest{grid-column:span 2;grid-row:auto;min-height:0}
  .t-land,.t-cv,.t-wide{grid-column:span 1}
  .t-calc{grid-column:span 1;grid-row:span 2}
- .works{grid-template-columns:repeat(2,1fr)}
+ .rail .work{flex-basis:calc((100% - 18px)/2)}
+ #cv .rail .work{flex-basis:calc((100% - 36px)/3)}
  .why{grid-template-columns:1fr}
  .step{grid-template-columns:70px 1fr}.step p{grid-column:2}
  .facts{grid-template-columns:repeat(2,1fr)}.fact:nth-child(2){border-right:0}.fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -208,9 +214,12 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
  .bento{grid-template-columns:1fr}
  .t-rest,.t-land,.t-calc,.t-cv,.t-wide{grid-column:auto;grid-row:auto}
  .t-rest .pic{margin:22px 0 0}
- .works{grid-template-columns:1fr}.work.big{grid-column:auto;grid-row:auto}
- .works:not(.open) .work.mx{display:none}
- .showall{display:flex}.works.open+.showall{display:none}.work.big .im{aspect-ratio:16/10}
+ .rail{margin:0 -5.5%;padding:0 5.5% 4px;scroll-padding-left:5.5%;gap:12px}
+ .rail .work{flex-basis:82%}
+ #cv .rail .work{flex-basis:56%}
+ .arrows{display:none}
+ .rail .work .meta span{display:none}
+ .row{margin-top:34px}
  .tile{padding:22px}.tile h3{font-size:23px}
  .step{grid-template-columns:52px 1fr;gap:14px;padding:22px 0}.step .n{font-size:34px}.step h3{font-size:20px}
  .final{padding:80px 22px;border-radius:24px}
@@ -225,7 +234,7 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
 
 <header class="nav" id="nav">
  <a href="#" class="logo"><img src="img/icon.png" alt="">DesignSpark</a>
- <nav class="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+ <nav class="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#calc">Live demo</a><a href="#faq">FAQ</a></nav>
  <a class="btn btn-w" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Hire me <span class="arrow">→</span></a>
 </header>
 
@@ -236,10 +245,10 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
   <h1 class="rv">I build websites that bring you <span class="serif og">customers</span></h1>
   <p class="sub rv">Web design studio for small businesses. Fast, modern, mobile-first.</p>
   <div class="svc-row rv">
-   <a class="sv" href="#work" data-f="rest"><i>🍽️</i><span><b>Restaurant websites</b><small>from $80</small></span></a>
-   <a class="sv" href="#work" data-f="land"><i>⚡</i><span><b>Landing pages</b><small>24h · from $25</small></span></a>
-   <a class="sv" href="calculators/"><i>🧮</i><span><b>Website calculators</b><small>from $30</small></span></a>
-   <a class="sv" href="img/cv-sample-1.jpg" target="_blank" rel="noopener"><i>📄</i><span><b>CV & resume design</b><small>from $10</small></span></a>
+   <a class="sv" href="#rest"><i>🍽️</i><span><b>Restaurant websites</b><small>from $80</small></span></a>
+   <a class="sv" href="#land"><i>⚡</i><span><b>Landing pages</b><small>24h · from $25</small></span></a>
+   <a class="sv" href="#calc"><i>🧮</i><span><b>Website calculators</b><small>from $30</small></span></a>
+   <a class="sv" href="#cv"><i>📄</i><span><b>CV & resume design</b><small>from $10</small></span></a>
   </div>
   <div class="cta rv">
    <a class="btn btn-w" href="https://www.fiverr.com/designsparkpk1" target="_blank" rel="noopener">Start your project <span class="arrow">→</span></a>
@@ -272,7 +281,7 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
    <p class="lead">Hand-built with clean code. No heavy page builders, no monthly plugin fees.</p>
   </div>
   <div class="bento">
-   <a class="tile t-rest rv" href="#work" data-f="rest">
+   <a class="tile t-rest rv" href="#rest">
     <span class="go">↗</span>
     <div class="tag">Restaurants & cafes</div>
     <h3>Restaurant websites that take orders</h3>
@@ -290,16 +299,16 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
      <small>ESTIMATE</small>
      <div class="tot" id="mt">$186</div>
     </div>
-    <div class="price">from <b>$30</b>&nbsp;·&nbsp;<a href="calculators/" style="color:#FFD36E">More demos →</a></div>
+    <div class="price">from <b>$30</b>&nbsp;·&nbsp;<a href="#calc" style="color:#FFD36E">Full demo ↓</a></div>
    </div>
-   <a class="tile t-land rv" href="#work" data-f="land">
+   <a class="tile t-land rv" href="#land">
     <span class="go">↗</span>
     <div class="tag">Landing pages</div>
     <h3>Ready in 24 hours</h3>
     <p>One fast page for clinics, gyms, apps and services.</p>
     <div class="price">from <b>$25</b></div>
    </a>
-   <a class="tile t-cv rv" href="img/cv-sample-1.jpg" target="_blank" rel="noopener">
+   <a class="tile t-cv rv" href="#cv">
     <span class="go">↗</span>
     <div class="tag">CV & resume</div>
     <h3>ATS-friendly CVs</h3>
@@ -322,27 +331,51 @@ footer nav{display:flex;gap:22px}footer nav a:hover{color:var(--text)}
   <div class="head rv">
    <div class="eyebrow">✦ Selected work</div>
    <h2>Recent <span class="serif og">projects</span></h2>
-   <p class="lead">Concept designs that show what I can build for your business.</p>
+   <p class="lead">Concept designs that show what I can build for your business. Swipe to see more.</p>
   </div>
-  <div class="filters rv">
-   <button class="fb on" data-f="all">All</button><button class="fb" data-f="rest">Restaurants</button><button class="fb" data-f="land">Landing pages</button><button class="fb" data-f="calc">Calculators</button>
+
+  <div class="row rv" id="rest">
+   <div class="row-h"><h3>Restaurant websites <small>5 projects</small></h3><div class="arrows"><button aria-label="Previous" data-d="-1">←</button><button aria-label="Next" data-d="1">→</button></div></div>
+   <div class="rail">
+    <div class="work"><div class="im"><img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Sultan Istanbul</h4><span>Turkish · ordering</span></div></div>
+    <div class="work"><div class="im"><img src="img/zilla-bite.jpg" alt="Zilla Bite website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Zilla Bite</h4><span>Steakhouse</span></div></div>
+    <div class="work"><div class="im"><img src="img/bellas.jpg" alt="Bella's website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Bella's</h4><span>Pizza · cart</span></div></div>
+    <div class="work"><div class="im"><img src="img/flame-up.jpg" alt="Flame Up website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Flame Up</h4><span>Fast food · deals</span></div></div>
+    <div class="work"><div class="im"><img src="img/al-arabian-mandi.jpg" alt="Al Arabian Mandi website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Al Arabian Mandi</h4><span>Arabian · Shinwari</span></div></div>
+   </div>
   </div>
-  <div class="works">
-   <div class="work big rv" data-c="rest"><div class="im"><img src="img/sultan-istanbul.jpg" alt="Sultan Istanbul website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Sultan Istanbul</h4><span>Restaurant</span></div></div>
-   <div class="work rv" data-c="land"><div class="im"><img src="img/brightsmile-dental.jpg" alt="BrightSmile dental landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>BrightSmile Dental</h4><span>Landing page</span></div></div>
-   <a class="work rv" data-c="calc" href="calculators/"><div class="im"><img src="img/calc-quote.jpg" alt="Instant quote calculator" loading="lazy" width="900" height="500"></div><div class="meta"><h4>Instant Quote</h4><span>Calculator · live</span></div></a>
-   <div class="work rv" data-c="rest"><div class="im"><img src="img/zilla-bite.jpg" alt="Zilla Bite website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Zilla Bite</h4><span>Restaurant</span></div></div>
-   <div class="work mx rv" data-c="land"><div class="im"><img src="img/ironpeak-fitness.jpg" alt="IronPeak fitness landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>IronPeak Fitness</h4><span>Landing page</span></div></div>
-   <div class="work mx rv" data-c="rest"><div class="im"><img src="img/bellas.jpg" alt="Bella's website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Bella's</h4><span>Restaurant</span></div></div>
-   <div class="work mx rv" data-c="land"><div class="im"><img src="img/flowly-saas.jpg" alt="Flowly app landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Flowly</h4><span>Landing page</span></div></div>
-   <a class="work mx rv" data-c="calc" href="calculators/"><div class="im"><img src="img/calc-roi.jpg" alt="Marketing ROI calculator" loading="lazy" width="900" height="500"></div><div class="meta"><h4>Marketing ROI</h4><span>Calculator · live</span></div></a>
-   <div class="work mx rv" data-c="rest"><div class="im"><img src="img/flame-up.jpg" alt="Flame Up website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Flame Up</h4><span>Restaurant</span></div></div>
-   <div class="work mx rv" data-c="rest"><div class="im"><img src="img/al-arabian-mandi.jpg" alt="Al Arabian Mandi website" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Al Arabian Mandi</h4><span>Restaurant</span></div></div>
-   <a class="work mx rv" data-c="cv" href="img/cv-sample-2.jpg" target="_blank" rel="noopener"><div class="im cvim"><img src="img/cv-sample-2.jpg" alt="Professional CV design" loading="lazy" width="900" height="1273"></div><div class="meta"><h4>Modern CV</h4><span>CV design</span></div></a>
-   <a class="work mx rv" data-c="calc" href="calculators/"><div class="im"><img src="img/calc-macro.jpg" alt="Calorie and macro calculator" loading="lazy" width="900" height="500"></div><div class="meta"><h4>Calorie & Macros</h4><span>Calculator · live</span></div></a>
+
+  <div class="row rv" id="land">
+   <div class="row-h"><h3>Landing pages <small>3 projects</small></h3><div class="arrows"><button aria-label="Previous" data-d="-1">←</button><button aria-label="Next" data-d="1">→</button></div></div>
+   <div class="rail">
+    <div class="work"><div class="im"><img src="img/brightsmile-dental.jpg" alt="BrightSmile dental landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>BrightSmile Dental</h4><span>Clinic · booking</span></div></div>
+    <div class="work"><div class="im"><img src="img/ironpeak-fitness.jpg" alt="IronPeak fitness landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>IronPeak Fitness</h4><span>Gym · pricing</span></div></div>
+    <div class="work"><div class="im"><img src="img/flowly-saas.jpg" alt="Flowly app landing page" loading="lazy" width="1280" height="769"></div><div class="meta"><h4>Flowly</h4><span>App · sign-ups</span></div></div>
+   </div>
   </div>
-  <button class="btn btn-g showall" id="showall">Show all projects</button>
+
+  <div class="row rv" id="cv">
+   <div class="row-h"><h3>CV & resume designs <small>2 samples</small></h3><div class="arrows"><button aria-label="Previous" data-d="-1">←</button><button aria-label="Next" data-d="1">→</button></div></div>
+   <div class="rail">
+    <a class="work" href="img/cv-sample-1.jpg" target="_blank" rel="noopener"><div class="im cvim"><img src="img/cv-sample-1.jpg" alt="Accountant CV design" loading="lazy" width="900" height="1273"></div><div class="meta"><h4>Finance CV</h4><span>ATS-friendly</span></div></a>
+    <a class="work" href="img/cv-sample-2.jpg" target="_blank" rel="noopener"><div class="im cvim"><img src="img/cv-sample-2.jpg" alt="Marketing CV design" loading="lazy" width="900" height="1273"></div><div class="meta"><h4>Marketing CV</h4><span>ATS-friendly</span></div></a>
+   </div>
+  </div>
   <p class="note">All projects shown are concept designs created to demonstrate my work.</p>
+ </div>
+</section>
+
+<section id="calc">
+ <div class="wrap">
+  <div class="head c rv">
+   <div class="eyebrow">✦ Live demo</div>
+   <h2>Try a calculator, <span class="serif og">right here</span></h2>
+   <p class="lead">Move the sliders and switch tabs. This is exactly what your visitors would use on your website.</p>
+  </div>
+  <div class="demo rv">
+   <iframe id="calcframe" src="calculators/?embed=1" title="Live calculator demo" loading="lazy"></iframe>
+  </div>
+  <p class="note" style="text-align:center">Works on WordPress, Shopify, Wix and Squarespace · from $30 · <a href="calculators/" style="color:#FFD36E">Open full screen ↗</a></p>
  </div>
 </section>
 
@@ -416,12 +449,13 @@ function upd(){const v=+r.value;r.style.setProperty('--p',((v-r.min)/(r.max-r.mi
  const st=t=>{const k=Math.min(1,(t-t0)/350),e=1-Math.pow(1-k,3);shown=from+(to-from)*e;mt.textContent='$'+Math.round(shown).toLocaleString('en-US');if(k<1)raf=requestAnimationFrame(st)};raf=requestAnimationFrame(st);}
 r.addEventListener('input',upd);upd();
 
-const fbs=document.querySelectorAll('.fb'),works=[...document.querySelectorAll('.work')];
-function filt(f){document.querySelector('.works').classList.toggle('open',f!=='all');fbs.forEach(b=>b.classList.toggle('on',b.dataset.f===f));works.forEach(w=>{const show=f==='all'||w.dataset.c===f;w.classList.toggle('hide',!show);w.classList.toggle('big',show&&f==='all'&&w===works[0]);if(show)w.classList.add('in')})}
-fbs.forEach(b=>b.addEventListener('click',()=>filt(b.dataset.f)));
-document.getElementById('showall').addEventListener('click',()=>{document.querySelector('.works').classList.add('open');works.forEach(w=>w.classList.add('in'))});
-document.querySelectorAll('.tile[data-f],.sv[data-f]').forEach(t=>t.addEventListener('click',()=>filt(t.dataset.f)));
-
+document.querySelectorAll('.row').forEach(row=>{const rail=row.querySelector('.rail'),[pv,nx]=row.querySelectorAll('.arrows button');
+ const st=()=>{pv.disabled=rail.scrollLeft<5;nx.disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-5};
+ row.querySelectorAll('.arrows button').forEach(b=>b.addEventListener('click',()=>rail.scrollBy({left:+b.dataset.d*(rail.querySelector('.work').offsetWidth+18),behavior:'smooth'})));
+ rail.addEventListener('scroll',st,{passive:true});addEventListener('resize',st);st();});
+const fr=document.getElementById('calcframe');
+function fit(){try{const d=fr.contentDocument;if(!d||!d.body)return;const st=d.createElement('style');st.textContent='.brand{display:none!important}body{min-height:0!important;padding-top:20px!important;padding-bottom:20px!important}';if(!d.getElementById('emb')){st.id='emb';d.head.appendChild(st)}fr.style.height=Math.ceil(d.querySelector('.app').getBoundingClientRect().height+44)+'px'}catch(e){}}
+fr.addEventListener('load',()=>{fit();setTimeout(fit,400);fr.contentWindow.addEventListener('resize',fit);fr.contentDocument.addEventListener('click',()=>setTimeout(fit,60))});
 document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=>{const q=b.parentElement,open=!q.classList.contains('open');document.querySelectorAll('.q').forEach(x=>{x.classList.remove('open');x.querySelector('button').setAttribute('aria-expanded','false')});if(open){q.classList.add('open');b.setAttribute('aria-expanded','true')}}));
 </script>
 </body>
